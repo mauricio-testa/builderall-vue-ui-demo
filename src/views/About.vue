@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <bui-page title="About" subtitle="Welcome to a Builderall application!">
+    <bui-alert index="alert-01" content="Welcome!" />
+  </bui-page>
 </template>

@@ -1,18 +1,11 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <bui-page title="Dashboard" subtitle="Welcome to a Builderall application!">
+    <template #page-header-right>
+      <b-button variant="primary" class="ml-auto">
+        <bui-icon name="plus" white :size="18"></bui-icon>
+        New calendar
+      </b-button>
+    </template>
+    <bui-alert index="alert-01" content="Welcome!" />
+  </bui-page>
 </template>
-
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
-</script>

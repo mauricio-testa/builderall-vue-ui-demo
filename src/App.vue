@@ -1,32 +1,22 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <the-sidebar />
+    <the-navbar />
+    <bui-container :sidebar-state="sidebarState">
+      <router-view />
+    </bui-container>
   </div>
 </template>
+<script>
+import TheSidebar from "./components/layout/TheSidebar";
+import TheNavbar from "./components/layout/TheNavbar";
+import { mapState } from "vuex";
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+export default {
+  components: {
+    TheSidebar,
+    TheNavbar,
+  },
+  computed: mapState(["sidebarState"]),
+};
+</script>
