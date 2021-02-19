@@ -10,6 +10,7 @@
 import { mapState } from "vuex";
 export default {
   computed: mapState(["sidebarState"]),
+  
   methods: {
     toggleSidebar(state) {
       this.$store.commit("toggleSidebar", state);
