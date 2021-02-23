@@ -113,6 +113,7 @@ export default {
       });
     },
     toast(message, variant) {
+      return;
       this.$bvToast.toast(message, {
         variant: variant,
       });

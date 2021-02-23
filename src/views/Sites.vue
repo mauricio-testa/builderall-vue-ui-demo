@@ -3,7 +3,7 @@
     <bui-alert index="alert-01" content="Welcome!" />
 
     <b-row class="bui-card-container">
-      <b-col sm="12" md="6" lg="6" v-for="i in 6" :key="i">
+      <b-col sm="12" md="6" lg="4" v-for="i in 6" :key="i">
         <b-card no-body class="bui-card-item">
           <template #header>
             <b-card-title>Card Title</b-card-title>
