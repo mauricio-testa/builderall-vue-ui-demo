@@ -84,11 +84,20 @@
         </b-form-group>
       </b-tab>
       <b-tab title="Dialogs">
-        <b-button variant="danger" @click="deleteItem()" class="mx-1">
+        <b-button variant="danger" @click="deleteItem()">
           <bui-icon name="trash" white size="18"></bui-icon>
-          Delete
+          Modal Delete
         </b-button>
         <bui-modal-confirm ref="modal" />
+        <b-button
+          v-for="variant in ['success', 'danger', 'warning']"
+          :key="variant"
+          class="mx-1"
+          :variant="variant"
+          @click="toast('example ' + variant, variant)"
+        >
+          Toast {{ variant }}
+        </b-button>
       </b-tab>
     </b-tabs>
   </bui-page>
@@ -113,7 +122,6 @@ export default {
       });
     },
     toast(message, variant) {
-      return;
       this.$bvToast.toast(message, {
         variant: variant,
       });
