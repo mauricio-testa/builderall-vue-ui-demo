@@ -3,6 +3,7 @@
     @toggle-sidebar="toggleSidebar"
     :sidebar-state="sidebarState"
     logo="https://booking.builderall.com/images/images/meta/logo.png"
+    logo-sm="https://booking.builderall.com/images/images/meta/logo-icon.png"
   />
 </template>
 
@@ -10,7 +11,7 @@
 import { mapState } from "vuex";
 export default {
   computed: mapState(["sidebarState"]),
-  
+
   methods: {
     toggleSidebar(state) {
       this.$store.commit("toggleSidebar", state);
