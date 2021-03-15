@@ -1,13 +1,24 @@
 <template>
   <bui-page title="Elements" subtitle="Welcome to a Builderall application!">
     <bui-alert index="alert-01" content="Welcome!" />
+
+    <bui-icon name="next" class="rtl-mirror"></bui-icon>
+
     <b-tabs card>
       <b-tab title="Inputs" active>
         <bui-form-group label="Name" help="Help text" :required="true">
           <b-form-input type="text"></b-form-input>
         </bui-form-group>
+
         <bui-form-group label="Language" help="Please select">
           <bui-language-selector />
+        </bui-form-group>
+
+        <bui-form-group label="Label with actions">
+          <b-form-input type="text" value="Form input error"></b-form-input>
+          <template #actions>
+            <bui-icon name="copy" gray size="16"></bui-icon>
+          </template>
         </bui-form-group>
 
         <bui-form-group label="Label with help" help="Help text">

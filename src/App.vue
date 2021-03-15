@@ -1,7 +1,10 @@
 <template>
   <div>
     <the-sidebar />
-    <the-navbar />
+    <the-navbar/>
+
+    <bui-notifications :notifications="[]"/>
+
     <bui-container :sidebar-state="sidebarState">
       <router-view />
     </bui-container>
