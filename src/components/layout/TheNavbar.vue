@@ -1,7 +1,9 @@
 <template>
   <bui-navbar
     @toggle-sidebar="toggleSidebar"
+    @change-language="changeLanguage"
     :sidebar-state="sidebarState"
+    :user="user"
     logo="https://booking.builderall.com/images/images/meta/logo.png"
     logo-sm="https://booking.builderall.com/images/images/meta/logo-icon.png"
   >
@@ -14,12 +16,15 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  computed: mapState(["sidebarState"]),
+  computed: mapState(["sidebarState", "user"]),
 
   methods: {
     toggleSidebar(state) {
       this.$store.commit("toggleSidebar", state);
     },
+    changeLanguage(lang) {
+      this.$store.commit('changeLanguage', lang)
+    }
   },
 };
 </script>

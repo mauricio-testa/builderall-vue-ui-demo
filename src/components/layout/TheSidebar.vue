@@ -3,6 +3,7 @@
     :menus="menus"
     :menus-bottom="menus_bottom"
     :sidebar-state="sidebarState"
+    :user="user"
   />
 </template>
 
@@ -33,6 +34,6 @@ export default {
     };
   },
 
-  computed: mapState(["sidebarState"]),
+  computed: mapState(["sidebarState", "user"]),
 };
 </script>
