@@ -23,7 +23,7 @@ export default {
       this.$store.commit("toggleSidebar", state);
     },
     changeLanguage(lang) {
-      this.$store.commit('changeLanguage', lang)
+
     }
   },
 };
