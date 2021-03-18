@@ -6,7 +6,7 @@
     logo-sm="https://booking.builderall.com/images/images/meta/logo-icon.png"
   >
     <template #items-right>
-      <bui-icon name="bell" v-b-toggle.bui-notifications></bui-icon>
+      <bui-icon name="bell" size="18" v-b-toggle.bui-notifications></bui-icon>
     </template>
   </bui-navbar>
 </template>

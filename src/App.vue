@@ -2,8 +2,7 @@
   <div>
     <the-sidebar />
     <the-navbar/>
-
-    <bui-notifications :notifications="[]"/>
+    <the-notification-center/>
 
     <bui-container :sidebar-state="sidebarState">
       <router-view />
@@ -13,12 +12,14 @@
 <script>
 import TheSidebar from "./components/layout/TheSidebar";
 import TheNavbar from "./components/layout/TheNavbar";
+import TheNotificationCenter from './components/layout/TheNotificationCenter'
 import { mapState } from "vuex";
 
 export default {
   components: {
     TheSidebar,
     TheNavbar,
+    TheNotificationCenter
   },
   computed: mapState(["sidebarState"]),
 };
