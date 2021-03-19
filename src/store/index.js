@@ -3,11 +3,11 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const sidebarStateKey = "bui_store_sidebar_state";
+const sidebarStateKey = 'bui_store_sidebar_state'
 
 export default new Vuex.Store({
   state: {
-    sidebarState: localStorage.getItem(sidebarStateKey) || "expanded",
+    sidebarState: localStorage.getItem(sidebarStateKey) || 'expanded',
     user: {
       name: 'Mauricio',
       email: 'mail@builderall.com',
@@ -16,9 +16,9 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    toggleSidebar(state, payload) {
-      localStorage.setItem(sidebarStateKey, payload);
+    toggleSidebar (state, payload) {
+      localStorage.setItem(sidebarStateKey, payload)
       state.sidebarState = payload
     }
-  },
+  }
 })

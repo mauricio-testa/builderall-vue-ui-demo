@@ -8,32 +8,32 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex'
 export default {
   data: () => {
     return {
       menus: [
-        { title: "Home", icon: "dashboard", to: "/" },
-        { title: "Sites", icon: "site", to: "/sites" },
-        { title: "Elements", icon: "gear", to: "/elements" },
+        { title: 'Home', icon: 'dashboard', to: '/' },
+        { title: 'Sites', icon: 'site', to: '/sites' },
+        { title: 'Elements', icon: 'gear', to: '/elements' }
       ],
       menus_bottom: [
         {
-          title: "Github",
-          icon: "gear",
-          href: "https://github.com/mauricio-testa/builderall-vue-ui-demo",
-          target: "_blank",
+          title: 'Github',
+          icon: 'gear',
+          href: 'https://github.com/mauricio-testa/builderall-vue-ui-demo',
+          target: '_blank'
         },
         {
-          title: "Docs",
-          icon: "gear",
-          href: "http://builderall-vue-ui.netlify.app/",
-          target: "_blank",
-        },
-      ],
-    };
+          title: 'Docs',
+          icon: 'gear',
+          href: 'http://builderall-vue-ui.netlify.app/',
+          target: '_blank'
+        }
+      ]
+    }
   },
 
-  computed: mapState(["sidebarState", "user"]),
-};
+  computed: mapState(['sidebarState', 'user'])
+}
 </script>
