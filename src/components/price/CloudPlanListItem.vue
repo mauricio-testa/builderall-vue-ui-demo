@@ -53,7 +53,7 @@
         :disabled="disabled"
         block
         size="lg"
-        class="justify-content-center"
+        class="btn justify-content-center"
         :variant="'primary'"
         @click="$emit('select', plan)"
       >
