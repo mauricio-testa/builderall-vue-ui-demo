@@ -8,6 +8,7 @@ import { BuilderallVueUi } from 'builderall-vue-ui'
 
 import '@/sass/app.scss'
 import 'builderall-vue-ui/dist/builderall-vue-ui.css'
+import 'builderall-vue-ui/src/assets/fonts/fonts.css'
 
 const BV_CONFIG = {
   BToast: {
